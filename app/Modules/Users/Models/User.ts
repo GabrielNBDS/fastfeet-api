@@ -15,6 +15,9 @@ export default class User extends BaseModel {
   @column({ serializeAs: null })
   public password: string
 
+  @column({ serializeAs: null })
+  public role: 'admin' | 'user'
+
   @column()
   public rememberMeToken?: string
 
