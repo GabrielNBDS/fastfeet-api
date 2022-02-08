@@ -21,4 +21,9 @@ export default Env.rules({
   APP_NAME: Env.schema.string(),
   DRIVE_DISK: Env.schema.enum(['local'] as const),
   NODE_ENV: Env.schema.enum(['development', 'production', 'testing'] as const),
+  DB_CONNECTION: Env.schema.string(),
+  PG_HOST: Env.schema.string(),
+  PG_PORT: Env.schema.string(),
+  PG_USER: Env.schema.string(),
+  PG_DB_NAME: Env.schema.string(),
 })

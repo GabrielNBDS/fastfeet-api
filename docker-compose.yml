@@ -1,0 +1,28 @@
+
+version: "3.1"
+
+services:
+  fastfeet_db:
+    image: postgres
+    container_name: fastfeet_db
+    environment:
+      POSTGRES_USER: lucid
+      POSTGRES_PASSWORD: lucid
+      POSTGRES_DB: fastfeet
+    ports:
+      - 5432:5432
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  fastfeet_reids:
+    image: redis:alpine
+    container_name: fastfeet_redis
+    command: redis-server --requirepass fastfeet
+    ports:
+      - 6379:6379
+    deploy:
+      resources:
+        limits:
+          memory: 512M
