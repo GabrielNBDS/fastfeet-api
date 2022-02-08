@@ -13,8 +13,8 @@ export default class CreateUserValidator {
   })
 
   public messages = {
-    'cpf.maxLength': 'O campo CPF deve ter no máximo 11 caracteres',
-    'cpf.minLength': 'O campo CPF deve ter no mínimo 11 caracteres',
+    'cpf.maxLength': 'O campo CPF deve ter 11 caracteres',
+    'cpf.minLength': 'O campo CPF deve ter 11 caracteres',
     'cpf.unique': 'CPF já utilizado',
   }
 }
