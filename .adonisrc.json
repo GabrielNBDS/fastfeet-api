@@ -25,7 +25,8 @@
     "@adonisjs/lucid",
     "@adonisjs/auth",
     "@adonisjs/bouncer",
-    "@adonisjs/redis"
+    "@adonisjs/redis",
+    "@adonisjs/attachment-lite"
   ],
   "aceProviders": [
     "@adonisjs/repl"
