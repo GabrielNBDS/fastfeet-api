@@ -1,0 +1,6 @@
+{
+  "all": false,
+  "include": [
+    "app/Modules/**/UseCases/**/*Service.ts"
+  ]
+}
