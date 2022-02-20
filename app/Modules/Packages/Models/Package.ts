@@ -31,6 +31,9 @@ export default class Package extends BaseModel {
   @attachment()
   public picture: AttachmentContract
 
+  @column()
+  public code: string
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
