@@ -4,13 +4,10 @@ import User from 'App/Modules/Users/Models/User'
 import { v4 as uuidv4 } from 'uuid'
 
 export const PackageFactory = Factory.define(Package, ({ faker }) => {
-  const status = 0 as 0 | 1 | 2
-
   return {
     name: faker.commerce.product(),
     recipient: faker.name.findName(),
     address: faker.address.streetAddress(),
-    status,
     postedDate: new Date(),
     code: uuidv4(),
   }

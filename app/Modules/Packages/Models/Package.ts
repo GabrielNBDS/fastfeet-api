@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon'
-import { BaseModel, beforeCreate, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
 import { attachment, AttachmentContract } from '@ioc:Adonis/Addons/AttachmentLite'
 import User from 'App/Modules/Users/Models/User'
 
@@ -15,9 +15,6 @@ export default class Package extends BaseModel {
 
   @column()
   public address: string
-
-  @column()
-  public status: 0 | 1 | 2
 
   @column()
   public postedDate: Date
@@ -45,9 +42,4 @@ export default class Package extends BaseModel {
 
   @belongsTo(() => User)
   public user: BelongsTo<typeof User>
-
-  @beforeCreate()
-  public static async defaultStatus(package_: Package) {
-    package_.status = 0
-  }
 }
