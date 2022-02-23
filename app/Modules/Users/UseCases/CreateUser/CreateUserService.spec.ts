@@ -16,7 +16,7 @@ test.group('CreateUserService', (group) => {
   })
 
   test('if can create a user', async (assert) => {
-    const user = await CreateUserService.execute(faker.name.findName(), '12345678900')
+    const user = await CreateUserService(faker.name.findName(), '12345678900')
 
     assert.instanceOf(user, User)
   })

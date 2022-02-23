@@ -19,7 +19,7 @@ test.group('WithdrawPackageService', (group) => {
 
     assert.isUndefined(packageToBeWithdrawn.withdrawalDate)
 
-    const withdrawnPackage = await WithdrawPackageService.execute(packageToBeWithdrawn)
+    const withdrawnPackage = await WithdrawPackageService(packageToBeWithdrawn)
 
     assert.exists(withdrawnPackage.withdrawalDate)
   })

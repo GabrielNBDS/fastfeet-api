@@ -18,7 +18,7 @@ test.group('CreatePackageService', (group) => {
   test('if can create a package', async (assert) => {
     const user = await UserFactory.with('packages').create()
 
-    const createdPackage = await CreatePackageService.execute(
+    const createdPackage = await CreatePackageService(
       'Any name',
       'Any recipient',
       'Any address',

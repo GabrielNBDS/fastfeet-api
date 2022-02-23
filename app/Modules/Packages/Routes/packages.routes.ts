@@ -4,7 +4,7 @@ import FindPackageByCodeController from '../UseCases/FindPackageByCode/FindPacka
 import IndexPackageByOwnerController from '../UseCases/IndexPackageByOwner/IndexPackageByOwnerController'
 import WithdrawPackageController from '../UseCases/WithdrawPackage/WithdrawPackageController'
 
-Route.get('/packages', IndexPackageByOwnerController.index).middleware('auth')
-Route.get('/packages/:code', FindPackageByCodeController.find)
-Route.post('/packages', CreatePackageController.create).middleware('auth')
-Route.patch('/packages/:id', WithdrawPackageController.withdraw).middleware('auth')
+Route.get('/packages', IndexPackageByOwnerController).middleware('auth')
+Route.get('/packages/:code', FindPackageByCodeController)
+Route.post('/packages', CreatePackageController).middleware('auth')
+Route.patch('/packages/:id', WithdrawPackageController).middleware('auth')

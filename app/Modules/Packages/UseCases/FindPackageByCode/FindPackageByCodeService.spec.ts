@@ -17,7 +17,7 @@ test.group('FindPackageByCodeService', (group) => {
   test('if can find package by code', async (assert) => {
     const createdPackage = await PackageFactory.create()
 
-    const foundPackage = await FindPackageByCodeService.execute(createdPackage.code)
+    const foundPackage = await FindPackageByCodeService(createdPackage.code)
 
     assert.equal(foundPackage.id, createdPackage.id)
   })
